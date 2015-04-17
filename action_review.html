@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <script type="application/ld+json">
+    {
+      "@context":               "http://schema.org",
+      "@type":                  "Restaurant",
+      "name":                   "Google Cafe",
+      "action": {
+        "@type":                "ReviewAction",
+        "review": {
+          "@type":              "Review",
+          "reviewRating": {
+            "@type":            "Rating",
+            "bestRating":       "5",
+            "worstRating":      "1"
+          }
+        },
+        "handler": {
+          "@type":              "HttpActionHandler",
+          "url":                "http://myawesomewebsite.com/rating",
+          "encoding": {
+            "url":              "http://schema.org/Encoding/UrlEncoded"
+          },
+          "method":             "http://schema.org/HttpRequestMethod/POST",
+          "requiredProperty": {
+            "@type":            "Property",
+            "name":             "review.reviewRating.ratingValue"
+          },
+          "optionalProperty": {
+            "@type":            "Property",
+            "name":             "review.reviewBody"
+          }
+        }
+      }
+    }
+    </script>
+  </head>
+  <body><p>This a test for a Go-To action in Gmail.</p></body>
+</html>

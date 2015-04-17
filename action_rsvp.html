@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Event",
+      "name": "Koudetat Growth Hacking",
+      "startDate": "2015-04-22T9:00:00Z",
+      "endDate": "2015-04-22T11:00:00Z",
+      "location": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "name": "TheFamily",
+          "streetAddress": "25 rue du petit musc",
+          "addressLocality": "Paris",
+          "addressRegion": "IDF",
+          "postalCode": "750074",
+          "addressCountry": "FR"
+        }
+      },
+      "action": [
+        {
+          "@type": "RsvpAction",
+          "handler": {
+            "@type": "HttpActionHandler",
+            "url": "http://mysite.com/rsvp?eventId=123&value=yes"
+          },
+          "attendance": "http://schema.org/RsvpAttendance/Yes"
+        },
+        {
+          "@type": "RsvpAction",
+          "handler": {
+            "@type": "HttpActionHandler",
+            "url": "http://mysite.com/rsvp?eventId=123&value=no"
+          },
+          "attendance": "http://schema.org/RsvpAttendance/No"
+        },
+        {
+          "@type": "RsvpAction",
+          "handler": {
+            "@type": "HttpActionHandler",
+            "url": "http://mysite.com/rsvp?eventId=123&value=maybe"
+          },
+          "attendance": "http://schema.org/RsvpAttendance/Maybe"
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body><p>Koudetat Growth Hacking.</p></body>
+</html>
